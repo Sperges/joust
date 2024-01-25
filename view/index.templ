@@ -1,0 +1,15 @@
+package view
+
+templ headerComponent(title string) {
+	<head><title>{ title }</title></head>
+}
+
+templ IndexPage() {
+	<html>
+		@headerComponent("Joust")
+		<body>
+			<h1>Joust</h1>
+			<p>Hello, Joust</p>
+		</body>
+	</html>
+}

@@ -1,0 +1,18 @@
+package view
+
+import "joust/model"
+import "fmt"
+
+templ KnightPage(knight *model.Knight) {
+	<div>
+		<h2>{ knight.FirstName } { knight.LastName }</h2>
+		<p>Age: { fmt.Sprint(knight.Age) }</p>
+		<p>Homeland: { knight.Region }</p>
+		<h3>Stats</h3>
+		<p>Accuracy: <b>{ fmt.Sprint(knight.KnightStats.Accuracy) }</b></p>
+		<p>Balance: <b>{ fmt.Sprint(knight.KnightStats.Balance) }</b></p>
+		<p>Riding: <b>{ fmt.Sprint(knight.KnightStats.Riding) }</b></p>
+		<p>Defense: <b>{ fmt.Sprint(knight.KnightStats.Defense) }</b></p>
+		<p>Valor: <b>{ fmt.Sprint(knight.KnightStats.Valor) }</b></p>
+	</div>
+}
